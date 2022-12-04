@@ -1,0 +1,114 @@
+/* sub2.css */
+/* container */
+/* spot */
+.spot{
+  background: url(../images/careers_visual_img.jpg) no-repeat 50% 0;
+  color: #fff;
+}
+.spot_inner>h2{
+  font-size: 46px;
+  margin-bottom: 15px;
+}
+.spot_inner>p{
+  font-size: 16px;
+  color: #eee;
+}
+.spot_inner>p.path{
+  position: absolute; bottom: 20px; right: 0;
+  font-size: 14px;
+  text-align: right;
+  color: #ccc;
+}
+
+/* content */
+p.info_txt{
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+table.job{
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.job th, .job td{
+  height: 60px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+table.job thead th{
+  border-top: 1px solid #000;
+  background-color: #f3f3f3;
+  font-size: 18px;
+}
+table.job thead th:first-of-type{
+  width: 120px;
+  border-left: none;
+}
+table.job thead th:nth-of-type(2){
+  width: 640px;
+}
+table.job thead th:last-of-type{
+  width: 380px;
+  border-right: none;
+}
+
+table.job tbody td{
+  border-top: none;
+  font-size: 16px;
+}
+table.job tbody td:first-of-type{
+  border-left: none;
+}
+table.job tbody td:last-of-type{
+  border-right: none;
+}
+table.job tbody tr:last-of-type td{
+  border-bottom: 1px solid #000;
+}
+
+/* faq */
+div.faq{
+  display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+  width: 100%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin-bottom: 60px;
+}
+div.faq>p{
+  font-size: 16px;
+  line-height: 45px;
+}
+div.faq>a{
+  display: block;
+  width: 160px; height: 45px;
+  background: #043285 url(../images/btn_arrow_ico_w.png) no-repeat 90% 50%;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+}
+
+
+/* top */
+a.btn_top{
+  display: none;
+  z-index: 100;
+  position: fixed; bottom: 30px; right: 80px;
+  width: 60px; height: 60px;
+  border: 1px solid #333;
+  background: #fff url(../images/top_btn_ico.png) no-repeat 50% 20%;
+  font-size: 13px;
+  color: #333;
+  text-align: center;
+  line-height: 80px;
+  cursor: pointer;
+}
+  a.btn_top.on{
+    display: block;
+  }
+  a.btn_top.ab{
+    position: absolute; bottom: auto; top: -100px; right: 80px;
+  }

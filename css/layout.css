@@ -1,0 +1,115 @@
+/* layout.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap'); /* font-family: "Noto Sans KR", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap'); /* font-family: "Noto Sans", sans-serif; */
+
+/* common */
+body{
+  font-size: 14px; font-family: "Noto Sans", "Noto Sans KR", Helvetica, sans-serif;
+  color: #333;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+a:hover{
+  text-decoration: none;
+  color: #333;
+}
+
+/* layout */
+#wrap{
+  width: 100%;
+}
+  #header{
+    z-index: 40;
+    position: relative;
+    width: 100%; height: 70px;
+  }
+    .header_wrap{
+      position: absolute; left: 0; top: 0;
+      width: 100%; height: 70px;
+      background-color: #f3f3f3;
+    }
+      .header_inner{
+        position: relative;
+        width: 100%; height: 70px;
+        background-color: #fff;
+        /* border-bottom: 1px solid #ccc; */
+      }
+  .main_visual{
+    z-index: 30;
+    position: relative;
+    width: 100%;
+  }
+  #container{
+    width: 100%;
+  }
+    /* main */
+    .content1{
+      width: 1142px;
+      margin: 0 auto;
+      padding: 90px 0 120px;
+    }
+    .content2{
+      width: 1142px;
+      margin: 0 auto;
+      padding: 69px 95px 61px;
+      background: linear-gradient(to bottom, #f4f6fb 40%, #fff 40%, #fff 60%);
+    }
+    .content2::after{
+      content: ""; display: block; clear: both;
+    }
+    .prhall{
+      position: relative;
+      width: 100%; height: 290px;
+      background: url(../images/bg_prhall.jpg) no-repeat 0 0;
+      padding-top: 100px;
+      box-sizing: border-box;
+    }
+    .content3{
+      width: 100%;
+      padding: 120px 0 180px;
+      background: #f4f7fb;
+    }
+    .content3::after{
+      content: ""; display: block; clear: both;
+    }
+    .content3>.content3_inner{
+      width: 1142px;
+      margin: 0 auto;
+    }
+    .content4{
+      width: 100%; height: 860px;
+    }
+
+    /* sub */
+    .spot{
+      width: 100%; height: 321px;
+    }
+      .spot_inner{
+        position: relative;
+        width: 1140px; height: 320px;
+        margin: 0 auto;
+        padding-top: 100px;
+        box-sizing: border-box;
+      }
+    #content{
+      width: 1140px;
+      margin: 0 auto;
+      padding: 100px 0 160px;
+    }
+
+  .sitemap{
+    width: 100%;
+    background-color: #f3f3f3;
+  }
+  #footer{
+    position: relative;
+    width: 100%; height: 185px;
+    background-color: #474a4f;
+  }
+    .foot_inner{
+      width: 1142px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
