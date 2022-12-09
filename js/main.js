@@ -33,7 +33,7 @@ window.addEventListener("load", () => {
     gnbMenu[i].addEventListener("mouseover", e => {
       e.currentTarget.classList.add("on");
       var ht = e.currentTarget.children[1].offsetHeight;
-      console.log(ht)
+      // console.log(ht)
       headerWrap.style.height = 70 + ht + "px";
     });
     gnbMenu[i].addEventListener("mouseout", e => {
@@ -176,4 +176,57 @@ window.addEventListener("load", () => {
     }
     list[index].classList.add("on", "active");
   };
+
+  // scroll fade-in
+  const para = document.querySelector(".main_visual>ul>li:first-of-type>p")
+  const content1 = document.querySelector(".content1")
+  const content2H2 = document.querySelector(".content2>h2")
+  const content2Ul = document.querySelector(".content2>ul")
+  const content2News = document.querySelector(".content2>.newsletter")
+  const content2Social = document.querySelector(".content2>.social")
+  const prhall = document.querySelector(".prhall")
+  const prhallBox = document.querySelector(".prhall>a>.box_wrap")
+  const prhallPic = document.querySelector(".prhall>a>p")
+  const cont3Img = document.querySelectorAll(".content3_inner>.product_list>ul>li>a>.img_area")
+  const cont3Txt = document.querySelectorAll(".content3_inner>.product_list>ul>li>a>.txt_area")
+
+  const observer = new IntersectionObserver((e) => {
+    e.forEach((i) => {
+      if (i.isIntersecting) {
+        i.target.classList.add("fadeIn")
+      }
+    })
+  });
+  observer.observe(para)
+  observer.observe(prhallBox)
+  observer.observe(cont3Txt[0])
+  observer.observe(cont3Txt[1])
+  observer.observe(cont3Txt[2])
+
+
+  const observerUp = new IntersectionObserver((e) => {
+    e.forEach((i) => {
+      if (i.isIntersecting) {
+        i.target.classList.add("fadeUp")
+      }
+    })
+  });
+  observerUp.observe(content1)
+  observerUp.observe(content2H2)
+  observerUp.observe(content2Ul)
+  observerUp.observe(content2News)
+  observerUp.observe(content2Social)
+  observerUp.observe(prhall)
+
+  const observerSide = new IntersectionObserver((e) => {
+    e.forEach((i) => {
+      if (i.isIntersecting) {
+        i.target.classList.add("fadeSide")
+      }
+    })
+  });
+  observerSide.observe(prhallPic)
+  observerSide.observe(cont3Img[0])
+  observerSide.observe(cont3Img[1])
+  observerSide.observe(cont3Img[2])
 });

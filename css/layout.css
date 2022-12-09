@@ -6,6 +6,7 @@
 body{
   font-size: 14px; font-family: "Noto Sans", "Noto Sans KR", Helvetica, sans-serif;
   color: #333;
+  overflow-x: hidden;
 }
 a{
   text-decoration: none;
@@ -49,12 +50,15 @@ a:hover{
       width: 1142px;
       margin: 0 auto;
       padding: 90px 0 120px;
+      transform: translateY(10%);
+      opacity: 0;
+      transition: all 1s;
     }
     .content2{
       width: 1142px;
       margin: 0 auto;
       padding: 69px 95px 61px;
-      background: linear-gradient(to bottom, #f4f6fb 40%, #fff 40%, #fff 60%);
+      background: linear-gradient(to bottom, #f4f6fb 30%, #fff 30%, #fff 60%);
     }
     .content2::after{
       content: ""; display: block; clear: both;
@@ -65,6 +69,9 @@ a:hover{
       background: url(../images/bg_prhall.jpg) no-repeat 0 0;
       padding-top: 100px;
       box-sizing: border-box;
+      transform: translateY(50%);
+      opacity: 0;
+      transition: all 1s;
     }
     .content3{
       width: 100%;

@@ -25,6 +25,13 @@ li.slide>p{
   color: #fff;
   text-align: center;
 }
+li.slide:first-of-type>p{
+  opacity: 0;
+  transition: opacity 1s 300ms;
+}
+li.slide:nth-of-type(2)>p{
+  left: 0; transform: translate(25%, -50%);
+}
 
 .slide_arr>a{
   z-index: 10;
@@ -154,17 +161,29 @@ a.btn_next{
   text-align: center;
   margin-bottom: 70px;
   line-height: 1;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 1s;
 }
 .content2>ul{
-  margin-bottom: 280px;
+  margin-bottom: 100px;
+  transform: translateY(30%);
+  opacity: 0;
+  transition: all 1s;
 }
 .content2>ul::after{
   content: ""; display: block; clear: both;
 }
 .content2>ul>li{
   float: left;
-  width: 340px;
+  width: 340px; height: 340px;
   margin-right: 60px;
+  border-bottom: 3px solid transparent;
+  transition: all .3s ease-in-out;
+}
+.content2>ul>li:hover{
+  border-bottom-color: #043285;
+  box-shadow: 25px 20px 35px rgb(4 50 133 / 10%)
 }
 .content2>ul>li:last-child{
   margin-right: 0;
@@ -242,6 +261,9 @@ a.btn_next{
   width: 540px;
   background: #f4f7fb;
   padding: 30px;
+  transform: translateY(50%);
+  opacity: 0;
+  transition: all 1s;
 }
 .content2>.newsletter>ul{
   width: 100%;
@@ -265,6 +287,9 @@ a.btn_next{
   float: right;
   width: 450px;
   padding-top: 30px;
+  transform: translateY(50%);
+  opacity: 0;
+  transition: all 1s;
 }
 .content2>.social>ul{
   width: 100%;
@@ -307,6 +332,8 @@ a.btn_next{
 .prhall>a>.box_wrap{
   width: 100%; max-width: 1200px;
   margin: 0 auto;
+  opacity: 0;
+  transition: all 1.5s 1s;
 }
 .prhall>a>.box_wrap>h2{
   display: inline-block;
@@ -341,6 +368,9 @@ a.btn_next{
   width: 45%; height: 100%;
   background: url(../images/img_prhall.png) no-repeat 50% 50%;
   text-indent: -9999px; overflow: hidden;
+  transform: translateX(30%);
+  opacity: 0;
+  transition: all 1s 500ms;
 }
 
 /* content3 */
@@ -419,19 +449,26 @@ a.btn_next{
 .content3_inner>.product_list>ul{
   margin-top: 185px;
 }
+.content3_inner>.product_list>ul>li{
+  height: 333px;
+}
 .content3_inner>.product_list>ul>li>a{
   display: block;
 }
 .content3_inner>.product_list>ul>li>a>.img_area, .content3_inner>.product_list>ul>li>a>.txt_area{
   float: left;
   width: 50%; height: 333px;
+  overflow: hidden;
 }
 .content3_inner>.product_list>ul>li>a>.img_area>img{
   width: 100%;
+  transition: all 500ms ease-out;
 }
 .content3_inner>.product_list>ul>li>a>.txt_area{
   padding: 55px 0 0 60px;
   box-sizing: border-box;
+  opacity: 0;
+  transition: all 1s 1s;
 }
 .content3_inner>.product_list>ul>li>a>.txt_area>dl>dt{
   font-size: 28px; font-weight: 600;
@@ -462,6 +499,7 @@ a.btn_next{
   text-align: center;
   background: #fff;
   border: none;
+  transition: all 500ms ease-out;
 }
 .content3_inner>.product_list>ul>li>a>.txt_area>span::after{
   content: "";
@@ -469,9 +507,32 @@ a.btn_next{
   width: 15px; height: 11px;
   margin: -2px 0 0 10px;
   background: url(../images/ico_prd_arr.png);
+  transition: all 500ms ease-out;
 }
 .content3_inner>.product_list>ul>li:nth-of-type(2)>a>.img_area, .content3_inner>.product_list>ul>li:nth-of-type(2)>a>.txt_area{
   float: right;
+}
+
+.content3_inner>.product_list>ul>li:hover>a>.img_area>img{
+  transform: scale(1.1);
+}
+.content3_inner>.product_list>ul>li:hover>a>.txt_area>span{
+  color: #fff;
+  background: #1428a0;
+}
+.content3_inner>.product_list>ul>li:hover>a>.txt_area>span::after{
+  background: url(../images/ico_prd_arr_on.png);
+}
+
+.content3_inner>.product_list>ul>li>a>.img_area{
+  transform: translateX(-20%);
+  opacity: 0;
+  transition: all 1s;
+}
+.content3_inner>.product_list>ul>li:nth-of-type(2)>a>.img_area{
+  transform: translateX(20%);
+  opacity: 0;
+  transition: all 1s;
 }
 
 /* content4 */
@@ -480,9 +541,12 @@ a.btn_next{
   display: block;
   float: left;
   width: 50%; height: 100%;
+  overflow: hidden;
 }
 .content4>a>div{
+  position: relative;
   width: 100%; height: 100%;
+  transition: all 500ms ease-out;
 }
 .content4>a:first-of-type>div{
   background: url(../images/img_company01.jpg) no-repeat center / cover;
@@ -490,6 +554,20 @@ a.btn_next{
 .content4>a:last-of-type>div{
   background: url(../images/img_company02.jpg) no-repeat center / cover;
 }
+.content4>a>div::after{
+  content: "";
+  position: absolute;
+  width: 100%; height: 100%;
+  transition: all 500ms ease-out;
+}
+.content4>a:hover>div{
+  transform: scale(1.1);
+}
+.content4>a:hover>div::after{
+  background: rgba(0, 0, 0, 0.5);
+
+}
+
 .content4>a>dl{
   z-index: 2;
   position: absolute; top: 50%; transform: translateY(-50%);
@@ -539,7 +617,7 @@ a.btn_next{
 
 /* top */
 a.btn_top{
-  display: none;
+  display: block;
   z-index: 100;
   position: fixed; bottom: 30px; right: 80px;
   width: 60px; height: 60px;
@@ -550,11 +628,28 @@ a.btn_top{
   color: #333;
   text-align: center;
   line-height: 80px;
+  visibility: hidden;
+  opacity: 0;
   cursor: pointer;
+  transition: all 400ms;
 }
   a.btn_top.on{
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
   a.btn_top.ab{
     position: absolute; bottom: auto; top: -100px; right: 80px;
   }
+
+/* fade */
+.fadeIn{
+  opacity: 1 !important;
+}
+.fadeUp{
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+.fadeSide{
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
